@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="login-form">
+        <h1>Login</h1>
+        <div class="container">
+            <div class="main">
+                <div class="content">
+                    <h2>Log In</h2>
+                    <form id="logindoc">
+                        <input type="text" name="" placeholder="username" id="username" required autofocus="">
+                        <input type="password" name="" placeholder="password" id="password" required autofocus="">
+                         <button class="btn" type="submit">
+                            Login
+                         </button>
+                         <p id="message"></p>
+
+                    </form>
+                    <p class="account">Don't Have An Account? <a href="register.html">Register</a></p>
+<script>
+    document.getElementById('logindoc').addEventListener("submit",function(event)
+    {
+        event.preventDefault();
+        const username=document.getElementById('username').value;
+        const password=document.getElementById('password').value;
+        const message=document.getElementById('message');
+        if(username=='lokesh21' && password=='Loki2124')
+        {
+            message.style.color='green';
+            message.textContent='Login Suceesfull';
+        }else{
+            message.style.color='red';
+            message.textContent='login failed ,please Register';
+        }
+    });
+</script>
+</div>
+<div class="form-img">
+    <img src="bg.png" alt="">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
